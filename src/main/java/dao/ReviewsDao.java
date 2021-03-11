@@ -87,9 +87,9 @@ public class ReviewsDao {
             List<Reviews> reviewsList = query.list();
             return reviewsList;
         } catch (Exception ex) {
+            System.out.println("lalala");
             ex.printStackTrace();
             return null;
         }
     }
 }
-
