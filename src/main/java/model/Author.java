@@ -29,7 +29,7 @@ public class Author {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private Long AuthorId;
+    private Long authorId;
 
     @Column(name = "firstName")
     private String firstName;
@@ -49,11 +49,11 @@ public class Author {
     }
 
     public Long getAuthorId() {
-        return AuthorId;
+        return authorId;
     }
 
     public void setAuthorId(Long authorId) {
-        AuthorId = authorId;
+        this.authorId = authorId;
     }
 
     public String getFirstName() {
@@ -72,12 +72,21 @@ public class Author {
         this.lastNAme = lastNAme;
     }
 
+    public List<Book> getBooks() {
+        return books;
+    }
+
+    public void setBooks(List<Book> books) {
+        this.books = books;
+    }
+
     @Override
     public String toString() {
         return "Author{" +
-                "AuthorId=" + AuthorId +
+                "authorId=" + authorId +
                 ", firstName='" + firstName + '\'' +
                 ", lastNAme='" + lastNAme + '\'' +
+                ", books=" + books +
                 '}';
     }
 }
