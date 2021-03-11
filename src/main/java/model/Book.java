@@ -30,7 +30,7 @@ public class Book {
     public Book(String title, String description, List<Author> authors) {
         this.title = title;
         this.description = description;
-        this.authors = authors;
+        this.authors=authors;
     }
 
     public Long getBookId() {
